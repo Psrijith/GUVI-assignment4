@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+.nav {
+  display: flex;
+  padding: 25px 25px; 
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;   
+  max-width: 1200px;
+  height: 130px; 
+  margin: 0 auto;
+}
+ 
+.heading h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#minav{
+    gap: 50px; 
+}
+
+.options {
+  display: flex;
+  margin-left: 0;
+  gap: 15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.options li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  font-weight: 500;
+}
+ 
+.headl {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.headl button img {
+    width: 20px;  
+    height: 20px;  
+  }
+
+.headl img {
+    width: 55px;  
+    height: 55px;  
+  }
+ 
+.dropdown-menu {
+    background-color: rgb(0, 0, 0); 
+}
+
+.dropdown-menu {
+    position: fixed;  
+    width: 100%; 
+    height: 100vh;   
+    display: flex; 
+    flex-direction: column;  
+    justify-content: flex-start;  
+     
+} 
+ 
+#nav-options a::after {
+    content: '';
+    display: block;
+    width: 0;  
+    height: 2px;  
+    background-color: orange;       
+    transition: width 0.3s ease;  
+}
+
+#nav-options a:hover::after {
+    width: 100%; 
+}
+
+hr {
+  border: 0.5px solid rgba(154, 154, 154, 0.9);
+}
+ 
+
+/* checkout */
+/* Cart Badge */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    display: none; /* Hidden by default */
+}
+
+/* Show badge when cart has items */
+.cart-count.active {
+    display: block;
+}
+ 
+/* Cart Popup Styling */
+.cart-popup {
+    position: absolute;
+    top: 100px; /* Adjust based on your navbar height */
+    right: 50px; /* Adjust based on your layout */
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;  
+    z-index: 1000; 
+}
+
+.cart-popup.show {
+    display: block; /* Show the popup when the 'show' class is added */
+}
+ 
+.checkout-button:hover {
+    background-color: darkorange;
+}
+ 
+ 
+@media (max-width: 768px) {
+  .nav {
+    padding: 15px;  
+    gap: 1px;
+    height: 75px;
+  }
+
+  .heading h1 {
+    font-size: 20px; 
+  }
+ 
+  
+  .headl button img {
+    width: 22px;  
+    height: 22px;  
+  }
+
+  .headl img {
+    width: 40px;  
+    height: 40px;  
+  }
+
+  #minav{
+    gap:2px
+  }
+
+  .options {
+    display: none; 
+  }
+
+  hr{
+    display: none;
+  }
+}
+
+
+/*Imgaes loader*/
+.image-container {
+    margin-top: 50px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large-image {
+    margin-bottom: 20px; 
+}
+
+.large-image img {
+    width: 600px;  
+    height: auto;  
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 40px; 
+}
+
+.thumbnail-images img {
+    width: 100px;
+    border-radius: 10px; 
+    height: auto; 
+    cursor: pointer;  
+    transition: transform 0.2s;  
+}
+
+.thumbnail-images img:hover {
+    transform: scale(1.1);  
+}
+
+#main-image{
+  border-radius: 10px;
+}
+
+.additem{
+  margin-top: 180px;
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
+#carouselExample {
+        display: none;  
+}
+
+.discount{
+  margin-top: 15px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: #FFEDE0;  
+  font-weight: 700;
+  color: rgb(255, 115, 0);
+}
+
+.adddiv{
+  display: flex;
+  gap: 25px;
+}
+
+.counter{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.counter button{
+   display: flex;
+    justify-content: center;  
+    align-items: center;  
+    border: none; 
+    cursor: pointer;   
+    width: 20px;  
+    height: 20px;  
+}
+ 
+.sub,.add{
+  background-color: white; 
+  justify-items: center;  
+}
+ 
+.add-to-cart,#checkout-button{
+  color: white;
+  background-color: #FF7D1A;
+  border: 0px;
+  height: 55px; 
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+@media (max-width: 768px) { 
+  .image-container {
+        display: none;  
+    }
+    #carouselExample {
+        display: block; 
+    }
+    .body{
+        display: flex; 
+        flex-direction: column;
+    }
+    .additem{
+      margin-top: 25px;
+      margin-left: 30px ;
+      margin-right: 35px;
+    }
+    .adt{
+      justify-content: space-between;
+      display: flex;
+    } 
+    .discount{
+      margin-top: 7px;
+    }
+    .adddiv{
+      display: flex;
+      flex-direction: column;
+    }
+    .counter{
+      width: 100%;
+      justify-content: space-around;
+    }
+}
